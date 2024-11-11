@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User</title>
+</head>
+<body>
+<h1>Add User</h1>
+<form action="#" th:action="@{/user/add}" th:object="${user}" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" th:field="*{name}" required><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" th:field="*{email}" required><br><br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="email" th:field="*{password}" required><br><br>
+
+  <label for="address">Adresa:</label>
+  <input type="text" id="address" name="email" th:field="*{address}" required><br><br>
+
+  <button type="submit">Add User</button>
+</form>
+</body>
+</html>
